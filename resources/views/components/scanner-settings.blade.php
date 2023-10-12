@@ -117,7 +117,7 @@
     var upload_data = document.getElementById("qrcode");
     if(upload_data){
         var qrcode = new QRCode("qrcode", {
-            text: "{{$qr->upload_data}}",
+            text: "{!! $qr->upload_data !!}",
             width: 170,
             height: 170,
             colorDark : "#000000",
@@ -127,7 +127,7 @@
     }
 
     var qrcode = new QRCode("qrcode_clear", {
-        text: "{{$qr->clear_data}}",
+        text: "{!! $qr->clear_data !!}",
         width: 170,
         height: 170,
         colorDark : "#000000",
@@ -135,7 +135,7 @@
         correctLevel : QRCode.CorrectLevel.H
     });
     var qrcode = new QRCode("qrcode_inventory", {
-        text: "{{$qr->inventory_mode}}",
+        text: "{!! $qr->inventory_mode !!}",
         width: 170,
         height: 170,
         colorDark : "#000000",
@@ -143,7 +143,7 @@
         correctLevel : QRCode.CorrectLevel.H
     });
     var qrcode = new QRCode("qrcode_realtime", {
-        text: "{{$qr->real_time_mode}}",
+        text: "{!! $qr->real_time_mode !!}",
         width: 170,
         height: 170,
         colorDark : "#000000",
